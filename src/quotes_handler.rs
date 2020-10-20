@@ -6,6 +6,6 @@ pub struct Ident {
     nonce: String,
 }
 
-pub async fn identity(ident: web::Query<Ident>) -> impl Responder {
-    HttpResponse::Ok().body(format!("Nonce: {}", ident.nonce))
+pub async fn identity(param: web::Query<Ident>) -> impl Responder {
+    HttpResponse::Ok().body(format!("Nonce: {}", param.nonce))
 }
