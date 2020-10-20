@@ -17,32 +17,3 @@ async fn main() -> std::io::Result<()> {
     .run()
     .await
 }
-
-// GET:
-// tentant -> /quotes/identity?nonce={nonce}
-
-// tenant ->  /keys/verify?challenge={challenge}'
-// challenge = TPM_Utilities.random_password(20)
-
-// POST
-// tenant -> /keys/ukey
-// contains data=u_json_message
-// data = {
-//    'encrypted_key': b64_encrypted_u,
-//    'auth_tag': self.auth_tag
-//}
-
-// #[actix_web::main]
-// async fn main() -> std::io::Result<()> {
-//     HttpServer::new(|| {
-//         App::new()x
-
-//             .service(root)
-//             .service(get_keys)
-//             .service(get_quotes)
-//             .service(post_keys)
-//     })
-//     .bind("127.0.0.1:8080")?
-//     .run()
-//     .await
-// }
